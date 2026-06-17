@@ -113,11 +113,11 @@ export function initStage(canvas) {
 
   /* roadmap laser */
   const roadmapLaserCore = new THREE.Mesh(
-    new THREE.CylinderGeometry(0.015, 0.015, 40, 8),
+    new THREE.CylinderGeometry(0.008, 0.008, 40, 8),
     new THREE.MeshBasicMaterial({ color: 0x2dd4a0, transparent: true, opacity: 0.0 }),
   )
   const roadmapLaserHalo = new THREE.Mesh(
-    new THREE.CylinderGeometry(0.06, 0.06, 40, 8),
+    new THREE.CylinderGeometry(0.025, 0.025, 40, 8),
     new THREE.MeshBasicMaterial({ color: 0x2dd4a0, transparent: true, opacity: 0.0, blending: THREE.AdditiveBlending, depthWrite: false }),
   )
   roadmapLaserCore.position.y = 20
@@ -261,8 +261,8 @@ export function initStage(canvas) {
     const pTiers = CS.tiers || pProblem + 0.15
     const laserFadeOut = clamp((prog - pProblem) / Math.max(pTiers - pProblem, 1e-5), 0, 1)
     const laserAlpha = dropProg * (1 - laserFadeOut)
-    roadmapLaserCore.material.opacity = 0.8 * laserAlpha
-    roadmapLaserHalo.material.opacity = 0.2 * laserAlpha
+    roadmapLaserCore.material.opacity = 0.35 * laserAlpha
+    roadmapLaserHalo.material.opacity = 0.06 * laserAlpha
 
     stack.rotation.y = Math.sin(t * 0.07) * 0.035 + orbitAngle
 
