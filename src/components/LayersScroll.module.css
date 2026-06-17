@@ -43,11 +43,11 @@
 
 .card {
   width: 100%;
-  max-width: 34rem;
+  max-width: 40rem;
   background: rgba(12, 14, 20, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: 2.75rem;
+  padding: 3.25rem;
   border-radius: 18px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35), 0 0 60px rgba(45, 212, 160, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
