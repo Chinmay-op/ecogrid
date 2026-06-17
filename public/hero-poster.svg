@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="45%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <g opacity="0.35" stroke="#94a3b8" stroke-width="1" fill="none">
+    <rect x="220" y="180" width="520" height="720" rx="12"/>
+    <rect x="820" y="260" width="880" height="540" rx="12"/>
+    <path d="M740 540 H820"/>
+    <path d="M1700 540 H1820"/>
+    <circle cx="480" cy="420" r="72"/>
+    <circle cx="1260" cy="530" r="110"/>
+  </g>
+  <text x="960" y="980" text-anchor="middle" fill="#ffffff" opacity="0.4" font-family="Arial, sans-serif" font-size="28">
+    Add public/hero-video.mp4 for your facility footage
+  </text>
+</svg>
