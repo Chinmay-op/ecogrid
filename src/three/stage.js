@@ -156,11 +156,11 @@ export function initStage(canvas) {
     /* Phase 2 — Slide left: model moves left, still compressed */
     { p: slideEnd,                az: 32,  el: 18, dist: 6.0,  ty: 1.0,       shift: 2.2  },
     /* Phase 3 — Layer-by-layer zoom */
-    { p: l0,                      az: 30,  el: 13, dist: 2.7,  ty: focusY(0), shift: -1.2 },
-    { p: CS['1'],   az: -28, el: 11, dist: 2.6,  ty: focusY(1), shift: -1.2 },
-    { p: CS['2'],   az: 32,  el: 17, dist: 2.7,  ty: focusY(2), shift: -1.2 },
-    { p: CS['3'],   az: -30, el: 19, dist: 2.6,  ty: focusY(3) + 0.06, shift: -1.2 },
-    { p: p4,        az: 27,  el: 15, dist: 2.7,  ty: focusY(4), shift: -1.2 },
+    { p: l0,                      az: 30,  el: 13, dist: 2.7,  ty: focusY(0), shift: 1.0 },
+    { p: CS['1'],   az: -28, el: 11, dist: 2.6,  ty: focusY(1), shift: 1.0 },
+    { p: CS['2'],   az: 32,  el: 17, dist: 2.7,  ty: focusY(2), shift: 1.0 },
+    { p: CS['3'],   az: -30, el: 19, dist: 2.6,  ty: focusY(3) + 0.06, shift: 1.0 },
+    { p: p4,        az: 27,  el: 15, dist: 2.7,  ty: focusY(4), shift: 1.0 },
     /* Zoom out at zoomOutPoint — model still visible, just pulled back */
     { p: zoomOutPoint, az: 42, el: 18, dist: 10.5, ty: 2.5,    shift: 4.5 },
     /* Phase 4 — Roadmap: camera pans down as model drops */
