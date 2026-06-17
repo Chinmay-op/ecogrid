@@ -26,7 +26,7 @@ export function Header() {
       <div className="flex items-center gap-4 text-sm">
         <Link
           href="#contact"
-          className="rounded-full bg-[#ececec] px-5 py-2.5 text-sm font-medium text-black shadow-sm transition hover:bg-white"
+          className="rounded-full bg-[#ececec] px-4 py-1.5 text-xs font-medium text-black transition hover:bg-white"
         >
           {site.cta}
         </Link>
