@@ -16,6 +16,7 @@ export function ScrollHijacker() {
   useEffect(() => {
     // Disable CSS scroll snap while hijacking is active
     document.documentElement.style.scrollSnapType = "none";
+    let cleanupListeners = () => {};
 
     const timeout = setTimeout(() => {
       const snapPoints = Array.from(document.querySelectorAll('[data-snap="true"]')) as HTMLElement[];
@@ -121,14 +122,19 @@ export function ScrollHijacker() {
           }
         });
       }
+
+      cleanupListeners = () => {
+        window.removeEventListener('wheel', updateWheelTime);
+        window.removeEventListener('touchmove', updateWheelTime);
+        window.removeEventListener('scroll', onNativeScroll);
+      };
     }, 500);
 
     return () => {
       clearTimeout(timeout);
       Observer.getAll().forEach(o => o.kill());
       document.documentElement.style.scrollSnapType = "";
-      window.removeEventListener('wheel', updateWheelTime);
-      window.removeEventListener('touchmove', updateWheelTime);
+      cleanupListeners();
     };
   }, []);
 
