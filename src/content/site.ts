@@ -2,7 +2,7 @@ export const site = {
   name: "OmniView IQ",
   tagline: "The triple-impact engine for industrial energy, compliance, and carbon.",
   subTagline: "From reactive reporting to proactive value creation.",
-  cta: "Start Saving — Book a Free Energy Audit",
+  cta: "Book a Free Audit",
   credit: "Prepared by Mightium · Target market: Indian industrial facilities",
   heroModules: ["PREDICT", "OPTIMISE", "MONETISE & COMPLY"],
 } as const;

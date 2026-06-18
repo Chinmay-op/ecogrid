@@ -18,9 +18,10 @@
 
 .chapter {
   position: relative;
-  height: 150vh;
+  height: 100vh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
+  pointer-events: none;
 }
 
 .pin {

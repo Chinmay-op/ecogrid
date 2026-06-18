@@ -111,7 +111,7 @@ export function initStage(canvas) {
   }))
   stack.add(wisps)
 
-  /* roadmap laser */
+  /* roadmap laser — disabled */
   const roadmapLaserCore = new THREE.Mesh(
     new THREE.CylinderGeometry(0.008, 0.008, 40, 8),
     new THREE.MeshBasicMaterial({ color: 0x2dd4a0, transparent: true, opacity: 0.0 }),
@@ -122,7 +122,7 @@ export function initStage(canvas) {
   )
   roadmapLaserCore.position.y = 20
   roadmapLaserHalo.position.y = 20
-  stack.add(roadmapLaserCore, roadmapLaserHalo)
+  /* laser meshes intentionally NOT added to scene */
 
   /* ── scroll choreography ───────────────────────────────────── */
   const sections = [...document.querySelectorAll('section[data-key]')]
@@ -166,8 +166,9 @@ export function initStage(canvas) {
     /* Phase 4 — Roadmap: camera pans down as model drops */
     { p: problem,   az: 40,  el: 16, dist: 12.0, ty: -5.0,      shift: 5.5 },
     { p: tiers,     az: 38,  el: 14, dist: 12.0, ty: -15.0,     shift: 5.5 },
-    { p: modelFinale,az: 45, el: 12, dist: 10.0, ty: -27.5,     shift: 4.8 },
-    { p: 1.001,     az: 42,  el: 18, dist: 10.5, ty: -27.5,     shift: 0 },
+    /* Finale — model shifts left (negative shift), text occupies center */
+    { p: modelFinale,az: 45, el: 12, dist: 10.0, ty: -27.5,     shift: -5.0 },
+    { p: 1.001,     az: 42,  el: 18, dist: 10.5, ty: -27.5,     shift: -5.0 },
   ]}
   let KEYS = camKeys()
 
@@ -207,7 +208,7 @@ export function initStage(canvas) {
   const step = (dt) => {
     const t = clock.elapsedTime
 
-    const lerpFactor = 1.0 - Math.pow(1.0 - 0.045, dt * 60)
+    const lerpFactor = 1.0 - Math.pow(1.0 - 0.12, dt * 60)
     prog += (target - prog) * (reduceMotion ? 1 : lerpFactor)
     smx += (mx - smx) * 0.04
     smy += (my - smy) * 0.04

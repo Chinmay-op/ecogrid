@@ -11,14 +11,14 @@
 }
 
 html {
-  scroll-behavior: auto;
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
   scrollbar-gutter: stable;
 }
 
 .snap-point {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
 }
 
 body {

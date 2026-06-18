@@ -5,7 +5,7 @@ export function RoadmapSections() {
     <div className={styles.productContainer}>
       
       {/* SECTION: THE PROBLEM */}
-      <section className={`${styles.productSection} ${styles.bgDark}`} data-key="problem">
+      <section className={`${styles.productSection} ${styles.bgDark}`} id="problem" data-key="problem">
         <div className={styles.sectionContent}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.headline}>You Are Running Your Energy Operations Blind.</h2>
@@ -68,7 +68,7 @@ export function RoadmapSections() {
       </section>
 
       {/* SECTION: STAKEHOLDERS / ONE PANE OF GLASS */}
-      <section className={`${styles.productSection} ${styles.bgCards}`} data-key="value">
+      <section className={`${styles.productSection} ${styles.bgCards}`} id="modules" data-key="value">
         <div className={styles.sectionContent}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.headline}>One Pane of Glass.<br/>Four Distinct Victories.</h2>
@@ -180,7 +180,7 @@ export function RoadmapSections() {
       </section>
 
       {/* SECTION: DEPLOYMENT TIERS */}
-      <section className={`${styles.productSection} ${styles.bgDark}`} data-key="tiers">
+      <section className={`${styles.productSection} ${styles.bgDark}`} id="pricing" data-key="tiers">
         <div className={styles.sectionContent}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.headline}>Deployment Tiers</h2>
@@ -240,6 +240,14 @@ export function RoadmapSections() {
           </div>
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className={styles.footer} id="contact">
+        <div className={styles.footerContent}>
+          <p>Built by Mightium. Target market: Indian industrial facilities.</p>
+          <p>Benchmarks draw on BEE, Central Electricity Authority, state tariff orders (MERC/MSEDCL, BESCOM, GERC), US DOE, LBNL, and peer-reviewed forecasting studies.</p>
+        </div>
+      </footer>
       
     </div>
   );

@@ -38,7 +38,7 @@ function Card({ layer }: { layer: any }) {
 
 export function LayersScroll() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="platform">
       {/* The 3D model choreography transitions seamlessly from the hero slide */}
 
       {LAYERS.map((l) => (

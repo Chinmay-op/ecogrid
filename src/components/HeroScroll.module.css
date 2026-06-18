@@ -8,7 +8,7 @@
   width: 100%;
   height: 10px;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
   pointer-events: none;
 }
 
